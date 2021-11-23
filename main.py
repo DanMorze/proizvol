@@ -34,7 +34,10 @@ class RandomCircle(QMainWindow):
     def draw_circle(self, qp):
         x = randint(30, 770)
         y = randint(30, 570)
-        qp.setBrush(QColor(255, 255, 0))
+        color1 = randint(10, 255)
+        color2 = randint(10, 255)
+        color3 = randint(10, 255)
+        qp.setBrush(QColor(color1, color2, color3))
         number = randint(5, 300)
         qp.drawEllipse(x - number // 2, y - number // 2, number, number)
 
