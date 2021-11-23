@@ -1,18 +1,18 @@
 import sys
 
 from random import randint
-from PyQt5 import uic
 from PyQt5.QtGui import QColor, QPainter
 from PyQt5.QtWidgets import QApplication, QMainWindow
+from UI import Ui_MainWindow
 
 
 SCREEN_SIZE = [800, 600]
 
 
-class RandomCircle(QMainWindow):
+class RandomCircle(QMainWindow, Ui_MainWindow):
     def __init__(self):
-        super(QMainWindow, self).__init__()
-        uic.loadUi("UI.ui", self)
+        super().__init__()
+        self.setupUi(self)
         self.setFixedSize(*SCREEN_SIZE)
         self.do_paint = False
         self.click = 0
